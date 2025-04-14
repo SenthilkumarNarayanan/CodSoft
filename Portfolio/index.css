@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppons", sans-serif;
+}
+body{
+    background-color: black;
+}
+img{
+    width: 150px;
+    border-radius: 120px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    -ms-border-radius: 120px;
+    -o-border-radius: 120px;
+}
+#header{
+  background: url() no-repeat;
+  width: 100%;
+  background-size: 500px;
+  background-position: center;
+  
+}
+  .container{
+    padding: 10px 10%;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.bgi img{
+    width: 400px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 140px;
+    margin-bottom: 200px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 200px;
+        
+    position: relative;
+
+}
+
+nav ul li a::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+
+} 
+.header-text{
+    margin-top:45px ;
+    font-size: 25px;
+    color:white;
+    padding-top: 25px;
+
+}
+.header-text h2{
+    font-size: 60px;
+    margin-top: 20px;
+   padding-top: 10px;
+}
+.header-text span{
+    color: rgb(124, 17, 87);
+}
+#about{
+    padding: 80px 0;
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 15%;
+}
+.about-col-1 img{
+    width: 500px;
+}
+.about-col-2{
+    flex-basis: 40%;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+.sub-title1{
+    padding-top: 10px;
+}
