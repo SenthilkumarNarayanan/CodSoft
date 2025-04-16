@@ -12,7 +12,7 @@ function equal(){
     expression="";
 
 }
-function clear(){
+function clearInput(){
     expression="";
     userInput.value=expression
 }
