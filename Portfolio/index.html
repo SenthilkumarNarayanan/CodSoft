@@ -1,75 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
 
-</link>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
-<body >
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="/Level1-task1/CodSoft/Portfolio/utils/logo.svg" alt="">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hero">
-                    <div class="header-text">
-                        <p>Full Stack Developer</p>
-                        <h2>Hi, I am <span>SenthilKumar</span>    
-                        <br> from Coimbatore</h2>
-                    </div>
-                    <div class="bgi">
-                        <img src="/Level1-task1/CodSoft/Portfolio/utils/logo.webp" alt=""> 
-                    </div>
-    
-    
-            </div>
-    
-            </div>
+
+<body>
+  <nav id="desktop-nav">
+    <img class="logo" src="./assets/portfolio-logo-png-transparent.png" alt="">
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#Cer-Edu">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <nav id="hamburger-nav">
+        <div class="logo">
         </div>
-    </div>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="/Level1-task1/CodSoft/Portfolio/utils/about.webp" alt="">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <h3 class="sub-title1">I am a highly motivated and 
-                        detail-oriented MERN Stack Developer 
-                        with 1 year of experience and a strong foundation in full-stack web 
-                        development. I have built several projects 
-                        using MongoDB, Express.js, React.js, and 
-                        Node.js, showcasing my ability to create 
-                        dynamic and responsive web applications. 
-                        I’m passionate about coding, problem-solving,
-                         and continuously learning new technologies to grow 
-                         as a developer.
-                        <br>
-                        <br>
-                        Key Highlights:
-                        <br>
-                        <br>                       
-                        Proficient in HTML, CSS, JavaScript, and React.js for building interactive UIs      
-                        Experience with Node.js and Express.js for backend development and API creation                        
-                        Knowledge of MongoDB for database management and integration                       
-                        Familiar with Git, GitHub, and RESTful API concepts                        
-                        Strong understanding of responsive design, debugging, and deployment basics                        
-                        Enthusiastic team player with good communication skills and a willingness to learn
-                        
-                    </h3>
-                </div>
-            </div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#Cer-Edu" onclick="toggleMenu()">Certifications</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
         </div>
+      </nav>
     </div>
+    <img id="theme-toggle" src="./assets/night-mode.png" alt="">
+
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img style="border-radius: 150%;" src="./assets/senthil passport (1).jpeg" alt="profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Senthil Kumar</h1>
+      <marquee class="section__text__p2" width="100%" direction="right" height="100px">
+        MERN full-stack Developer
+
+      </marquee>
+
+      <div class="btn-container">
+        <button id="resume" class="btn btn-color-2" onclick="window.open('./assets/CV-senthil.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" target="_blank"
+          onclick="location.href='https://linkedin.com/in/senthilkumar-narayanan'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon" target="_blank"
+          onclick="location.href='https://github.com/SenthilkumarNarayanan'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <br>
+    <br>
+    <div class="about-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+
+          <div class="text-container">
+
+            <p>
+              Motivated and detail-oriented Full Stack Developer with a strong foundation in web development technologies including HTML, CSS, JavaScript, React.js, Node.js, Express JS and MongoDB. Recently completed hands-on projects involving responsive UI design, RESTful API development, and database integration. Adept at problem-solving, debugging, and working in collaborative environments using Git methodologies.
+              Eager to contribute to real-world projects and grow as a developer in a dynamic tech team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img id="arrow" src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+      onclick="location.href='./#experience'" />
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <br>
+    <br>
+    <h1 class="title" id="Cer-Edu">Education and Certifications</h1>
+    <br>
+    <br>
+    <div class="about-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+          <h3>Certification Courses</h3>
+          <div class="exp">
+            <h3>Edureka</h3>
+            <p>Web development course <br />2022</p>  
+          </div>
+          <br>
+          <h4>Objectives</h4>
+          <br>
+<p>I have done Web development certification course in Edureka Sep 2022.</p>
+<h3>Certificate ID: BTY5ZCDC and verification page: </h3><a href="https://www.edureka.co/verify" target="_blank">www.edureka.co/verify</a>
+        </div>
+        <div class="details-container">
+          <img src="./assets/education.png" alt="Education icon" class="icon" />
+          <h3>Education</h3>
+          <div class="edu-container">
+            <div class="degree">
+              <h2>Bsc CS</h2>
+              <h2>HSC</h2>
+              <h2>SSLC</h2>
+            </div>
+            <div class="YOP">
+              <h3><b>2011 with aggregate nark of 62%</b></h3>
+              <h3><b>2007 with aggregate mark of 75%</b></h3>
+              <h3><b>2005 with aggregate mark of 78%</b></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <img id="arrow" src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+      onclick="location.href='./#experience'" />
+  </section>
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Tailwind CSS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MongoDB</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Express JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/netflix.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Netflix clone</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" target="_blank"
+              onclick="window.open('https://netlyfix-clone.netlify.app/','_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/todo.jpg" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Todo App</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" target="_blank"
+              onclick="window.open('https://mymern-todo-app.netlify.app/','_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/quiz.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Quiz App</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" target="_blank"
+              onclick="window.open('https://my-quiz-a-p-p.netlify.app/','_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:nsk89profile@gmail.com" target="_blank">nsk89profile@outlook.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://linkedin.com/in/senthilkumar-narayanan" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p id="Copyright">Copyright &#169; 2025 My-portfolio. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
